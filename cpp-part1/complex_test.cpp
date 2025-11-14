@@ -16,3 +16,15 @@ int main() {
     test  = test + test1;
     cout << test << endl;
 }
+
+/*
+Complex* pc = new Complex(1, 2);
+等价于
+Complex *pc;
+1.分配内存
+void* mem = operator new(malloc(sizeof(Complex)));
+2. 转型
+pc = static_cast<Complex*>(mem);
+3. 构造函数
+pc->Complex::Complex(1, 2);
+*/
