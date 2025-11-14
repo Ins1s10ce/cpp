@@ -33,12 +33,13 @@
 10. [带指针对象的析构函数](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/string.h#L68)
 
 11. [static成员变量](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/account.h)
+12. new
 
-12. [类模板](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/template-com.h)和[函数模板](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/account-test.cpp#L21)
+13. [类模板](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/template-com.h)和[函数模板](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/account-test.cpp#L21)
 
-13. [类继承](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/oop-demo.h)
+14 [类继承](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/oop-demo.h)
 
-14. [设计模式](https://www.bilibili.com/video/BV1aW411H7Xa?p=13)
+15. [设计模式](https://www.bilibili.com/video/BV1aW411H7Xa?p=13)
 
 ## 头文件和类的声明
 
