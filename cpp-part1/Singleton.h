@@ -17,6 +17,7 @@ private:
 
 Singlenton& Singlenton::getInstance() {
     // 只有调用的时候才创建这个静态的对象 多次调用也只是返回一个
+    // static变量只会初始化一次
     static Singlenton s;
     return s;
 }

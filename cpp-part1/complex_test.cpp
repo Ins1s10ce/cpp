@@ -22,9 +22,22 @@ Complex* pc = new Complex(1, 2);
 等价于
 Complex *pc;
 1.分配内存
-void* mem = operator new(malloc(sizeof(Complex)));
+void* mem = operator new // 调用malloc(sizeof(Complex))
 2. 转型
 pc = static_cast<Complex*>(mem);
 3. 构造函数
-pc->Complex::Complex(1, 2);
+pc->Complex::Complex(1, 2); // Complex::Complex(pc(this), 1, 2);
+
+delete ps;
+等价于
+1. 析构函数
+String::~String(ps);
+2. 释放内存
+operator delete(ps); // 调用free(ps)
+
+// 在VC中的内存动态分配情况
+[notes](https://blog.csdn.net/WJwwwwwww/article/details/132335486)
+
+array new/delete
+
 */

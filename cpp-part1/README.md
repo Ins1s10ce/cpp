@@ -2,6 +2,8 @@
 
 ### C++入门
 
+[csdn中笔记](https://blog.csdn.net/WJwwwwwww/article/details/132335486)
+
 1. [头文件和类的声明](#头文件和类的声明)
 
 2. [内联函数](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/complex.h#L11)
@@ -33,7 +35,8 @@
 10. [带指针对象的析构函数](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/string.h#L68)
 
 11. [static成员变量](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/account.h)
-12. new
+
+12. [new delete](https://github.com/Ins1s10ce/cpp/blob/patch-1/cpp-part1/complex_test.cpp#L20)
 
 13. [类模板](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/template-com.h)和[函数模板](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/account-test.cpp#L21)
 
