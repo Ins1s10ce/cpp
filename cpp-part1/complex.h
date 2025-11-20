@@ -7,6 +7,7 @@
 class complex {
 public:
     // 列表初始化 加快运行速度
+    // 直接调用拷贝构造函数, 避免进行默认构造和赋值操作
     complex(double r = 0, double i = 0): re(r), im(i) {}
     // 函数在class内定义为inline函数
     double real() const {return re;}

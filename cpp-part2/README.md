@@ -12,9 +12,9 @@
 
 3.  [pointer-like class](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/pointer-like.cpp)
 
-    > 补充智能指针的知识
+    > 补充智能指针和迭代器的知识
 
-4.  [仿函数](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/function-like.cpp)
+4.  [function-like class 仿函数](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/function-like.cpp)
 
     > 继续学习
 
@@ -22,7 +22,9 @@
 
 6.  [成员模板](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/member-templete.cpp)
 
-7.  [模板特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/specialization.cpp)和[模板偏特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/partial-specialization.cpp)
+    > 通常用做构造函数或者赋值操作符重载
+
+7.  [模板特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/specialization.cpp)和[模板偏特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/partial-specialization.cpp)和[template template parameter](https://github.com/Ins1s10ce/cpp/cpp-part2/template-template-parament.cpp)
 
 8.  [引用](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/reference.cpp)
 
