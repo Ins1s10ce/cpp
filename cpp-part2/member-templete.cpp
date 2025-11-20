@@ -9,6 +9,7 @@ struct pair {
     pair(const T1& a, const T2& b): first(a), second(b){}
 
     // 成员模板 子类组成的类型对 可以被复制给父类组成的类型对
+    // 通常用在构造函数中, 因为可以用模板类参数T的子类对模板类进行初始化
     template<class U1, class U2>
     pair(const pair<U1, U2>& p): first(p.first), second(p.second){}
 };
@@ -25,5 +26,6 @@ int main() {
     pair<Base1, Base2> p2(p1);
 
     Base1* b = new Fish;  // up-cast
+    pair<Base1, Base2> p3(pair<Fish, Duck>()); // up-cast, fish->base1, duck->base2
 
 }
