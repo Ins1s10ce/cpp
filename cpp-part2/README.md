@@ -24,9 +24,10 @@
 
     > 通常用做构造函数或者赋值操作符重载
 
-7.  [模板特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/specialization.cpp)和[模板偏特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/partial-specialization.cpp)和[template template parameter](https://github.com/Ins1s10ce/cpp/cpp-part2/template-template-parament.cpp)
+7.  [模板特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/specialization.cpp)和[模板偏特化](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/partial-specialization.cpp)和[template template parameter](https://github.com/Ins1s10ce/cpp/blob/master/cpp-part2/template-template-parameter.cpp)
 
 8.  [引用](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/reference.cpp)
+    > 假象
 
 9.  [虚指针和虚表,动态绑定](#虚指针和虚表)
 
@@ -42,9 +43,13 @@
 
     > 详情看c++11部分
 
-14. [重载new()和delete()](https://www.bilibili.com/video/BV1sW411J7JQ?p=2)
+14. [重载new()和delete()](https://www.bilibili.com/video/BV1kBh5zrEWL?spm_id_from=333.788.videopod.sections&vd_source=f41f0e09ae5f0b0c640030b3ff663f2c&p=23)
 
-    重载new 每个声明都要有独特的参数列，`Foo* pf = new(300, 'a')Foo`也可以重载delete() 只有当new所调用的ctor抛出异常才会调用这些重载版本的delete()
+    > 重载new 每个声明都要有独特的参数列，`Foo* pf = new(300, 'a')Foo` (第一个参数一定是size_t类型, 这里实际上有三个参数)
+    > 也可以重载delete(), 但是不会被delte调用, 只有当new所调用的ctor抛出异常才会调用对应重载版本的delete()
+
+15. [placement new]
+    - TODO
 
 ## 虚指针和虚表
 
