@@ -6,12 +6,15 @@
 第二部分属于对陈硕的muduo学习
 ### C++面向对象高级编程(上、下)
 
-[csdn笔记](https://blog.csdn.net/WJwwwwwww/article/details/132335486)
+[csdn笔记1](https://blog.csdn.net/WJwwwwwww/article/details/132335486)
+[csdn笔记2](https://blog.csdn.net/plain_rookie/article/details/123629825())
 
 + 上、[笔记](https://github.com/yangsoon/cpptest/blob/master/cpp-part1/README.md) [课件](https://github.com/yangsoon/cpptest/blob/master/PPT/C%2B%2B%E8%AF%BE%E4%BB%B6_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B(%E4%B8%8A).pdf) [代码](https://github.com/yangsoon/cpptest/tree/master/cpp-part1)
 + 下、[笔记](https://github.com/yangsoon/cpptest/blob/master/cpp-part2/README.md) [课件](https://github.com/yangsoon/cpptest/blob/master/PPT/C%2B%2B%E8%AF%BE%E4%BB%B6_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B(%E4%B8%8B).pdf) [代码](https://github.com/yangsoon/cpptest/tree/master/cpp-part2)
 
 ### C++新标准
+
+[csdn笔记](https://blog.csdn.net/plain_rookie/article/details/123629825())
 
 + [笔记](https://github.com/yangsoon/cpptest/blob/master/c%2B%2B11%3A14/README.md) [课件](https://github.com/yangsoon/cpptest/blob/master/PPT/C%2B%2B%E6%96%B0%E6%A0%87%E5%87%86C%2B%2B11_14.pdf) [代码](https://github.com/yangsoon/cpptest/tree/master/c%2B%2B11:14)
 

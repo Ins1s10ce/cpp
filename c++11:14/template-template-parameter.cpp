@@ -16,11 +16,13 @@ public:
     }
 };
 
+// alias template
 template<typename T>
 using Vec = vector<T, allocator<T>>;
 
 class MyString{};
 
 int main() {
+    //XCLs<MyString, list> x; // error: list has two template parameters
     XCls<MyString, Vec> x;
 }

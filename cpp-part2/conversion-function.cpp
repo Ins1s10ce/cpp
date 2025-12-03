@@ -97,7 +97,7 @@ int main() {
     // # 3 转换函数 vs non-explicit-one-argument ctor 
     Fraction2 f2(3,5);
     // use of overloaded operator '+' is ambiguous (with operand types 'Fraction2' and 'int')
-    // Fraction2 d2 = f2 + 4;  // 报错 因为二义性
+    Fraction2 d2 = f2 + 4;  // 报错 因为二义性:操作符重载发生在=之前, 编译器先计算表达式再赋值
 
     // #4 explicit 关键字
     Fraction3 f3(3,5);

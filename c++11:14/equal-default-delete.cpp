@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// 如果你定义了一个ctor 编译器就不会给你一个默认的ctor
+// 如果你定义了一个ctor 编译器就不会给你默认ctor
 // 如果强制加上一个=default就会重新获取一个默认的ctor
 class Zoo {
 public:
@@ -9,9 +9,10 @@ public:
     // Big three(三巨头) 函数包括 构造函数 拷贝构造 拷贝赋值 析构函数这3种
     // 这些函数有个特点 编译器会为这些函数加上默认版本 除非自己定义
     Zoo(const Zoo&) = delete;
-    // 右值引用
+    // 移动拷贝
     Zoo(Zoo&&) = default;
     Zoo& operator=(const Zoo&) = default;
+    // 移动赋值 big three -> big five
     Zoo& operator=(const Zoo&&) = delete;
     virtual ~Zoo(){}
 private:
