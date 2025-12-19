@@ -43,16 +43,18 @@ public:
         _init_data(str._data);
         return *this;
     }
+
     // move 构造 with noexcept
     MyString(MyString&& str) noexcept 
         // 把指针拷贝一下 长度拷贝一下
         :_data(str._data), _len(str._len){
         ++MCtor;
-        // 删除指针，如果不删除的话 如果右值被析构的时候编译器会调用析构函数把move的数据给回收
+        // 删除指针，否则右值被析构的时候编译器会调用析构函数把move的数据给回收
         // 配合析构函数来看
         str._len = 0;
         str._data = NULL; // 重要
     }
+
     // move assignment
     MyString& operator=(MyString&& str) noexcept{
         ++MAsgn;
@@ -91,6 +93,15 @@ size_t MyString::CCtor = 0;
 size_t MyString::CAsgn = 0;
 size_t MyString::MCtor = 0;
 size_t MyString::Dtor = 0;
+
+// T是右值引用, 将t传递给otherdef时, 类型变成左值(变量t有名字, 所以是左值)
+template<typename T>
+void function(T&& t) {
+    otherdef(t);
+    // 使用std::forward保持t的值类别
+    otherdef(forward<T>(t));
+}
+
 
 int main() {
 

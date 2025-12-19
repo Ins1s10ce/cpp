@@ -14,11 +14,14 @@
 
 ### C++新标准
 
-[csdn笔记](https://blog.csdn.net/plain_rookie/article/details/123629825())
+[csdn笔记1](https://blog.csdn.net/m0_74795952/article/details/142858121)
+[csdn笔记2](https://blog.csdn.net/plain_rookie/article/details/123629825)
 
 + [笔记](https://github.com/yangsoon/cpptest/blob/master/c%2B%2B11%3A14/README.md) [课件](https://github.com/yangsoon/cpptest/blob/master/PPT/C%2B%2B%E6%96%B0%E6%A0%87%E5%87%86C%2B%2B11_14.pdf) [代码](https://github.com/yangsoon/cpptest/tree/master/c%2B%2B11:14)
 
 ### STL
+
+[csdn笔记](https://blog.csdn.net/YRB0127/article/details/141170523)
 
 + [笔记](https://github.com/yangsoon/cpptest/blob/master/STL/README.md) [课件](https://github.com/yangsoon/cpptest/blob/master/PPT/STL%E6%A0%87%E5%87%86%E5%BA%93%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B.pdf) [代码](https://github.com/yangsoon/cpptest/tree/master/STL)
 

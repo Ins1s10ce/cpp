@@ -321,18 +321,86 @@
 
 22. Variadic Template 进阶 [视频地址](https://www.bilibili.com/video/BV1p4411v7Dh?t=1596&p=11) (以后看看)
 
+  变化的是template parameters
+  - 参数个数: 实现*递归函数调用*, 使用function template实现
+  - 参数类型: 实现*递归继承或递归复合*, 以class template实现
+
+
 23. [右值引用](https://github.com/yangsoon/cpptest/blob/master/c%2B%2B11%3A14/rvalue-reference.cpp) [知乎](https://www.zhihu.com/question/22111546/answer/30801982)
 
-    > 右值引用是新型的引用类型 帮助避免不必要的复制
+    *右值引用*: 允许引用右值, 帮助避免不必要的复制
 
-    当赋值的右手边是一个右值的时候 左手边的接受端可以偷右手边的资源而不需要执行allocation动作
+    当赋值的右手边是一个右值的时候 左手边的接受端可以偷右手边的资源而不需要执行allocation动作(copy constructor & copy assignment)
 
-    Lvalue 可以出现在 = 左边 (左值表示变量的地址)
-
-    Rvalue 只能出现在 = 右边 (右值表示存储的真实的值)
+    Lvalue 可以出现在=左边 locator value 有地址可以取到的值
+    Rvalue 只能出现在=右边 read value 没有地址只能读取的值
 
     类的临时对象是一个右值,临时变量一定被当成右值，因为临时对象创建之后 不会再被使用 所以直接把右值数据引用给别的变量，有时候一个左值在后面不会被用到，那么就可以使用move语义 把左值转成右值。
 
     **右值引用我的理解是编译器提供了一个接口 允许你进行赋值的时候直接使用右值的内存空间(其实就是将指针指向这块空间，当然在进行copy ctor和copy asgn的时候你需要自己实现操作，因为当你实现了右值引用的机制后编译器会自动调用你实现的函数)，对于一些左值 但是如果在接下来的scope中你用不到了 在进行赋值的时候可以使用move语句将左值转变为右值，因为左值后面用不到了所以你可以把左值指向的内存的指针给删除(注意一定要删除指针，因为当这个左值的scope结束后，编译器会调用析构函数，如果没有删除指针，会把你move出去的这块内存给删除所以就造成了错误)**
 
-24. hashtable
+    *move semantics*: 通过右值引用实现资源的移动(steal, 浅拷贝)而不是深拷贝
+      move constructor & move assignment (针对含有指针对象的成员)
+      将数据偷走, 并取消原来对象对资源的管理(将指针置为nullptr, 避免析构函数删除资源)
+
+    `std::move()`: 将左值强制转换为右值
+      - 被引用后的右值不能再次使用!
+    
+    *perfect forwarding*: 完美转发 `std::forward<T>(arg)`
+      - 保留实参的左值/右值属性, 传递给另一个函数
+
+
+24. array
+
+  c/c++声明规则: 声明模仿使用(declaration mimics use)
+    - 变量的声明形式应该与使用时相同
+  
+  ```c++
+  // 使用: a[0] 声明: a是一个数组, 元素类型为int
+  int a[100]; // 合法
+  int[100] b; // 非法
+  // T是一个数组类型, 元素类型为int
+  typedef int T[100]; // 合法
+  T c;
+
+  sizeof(int[100]) // 400
+  ```
+
+25. hashtable
+
+  当hash table元素个数超过bucket数量的load factor时, 会触发rehash操作
+    
+  ```c++
+  std::unordered_set
+  std::unordered_multiset
+  std::unordered_map
+  std::unordered_multimap
+  ```
+
+26. hash function
+
+  标准库中提供了hash function的支持 用于hash table容器 unordered_set/map
+  包括一个泛化版本`template<class key> struct hash{}`  以及一些基本类型的特化版本
+  ```c++
+  // 标准库提供了一些基本类型的hash function特化
+  std::hash<int>
+  std::hash<std::string>
+  std::hash<double>
+  // 自定义类型需要自己实现hash function特化
+  struct Person {
+    std::string firstname;
+    std::string lastname;
+    int age;
+  };
+
+  namespace std {
+    template<>
+    struct hash<Person> {
+      size_t operator()(const Person& p) const {
+        return hash<string>()(p.firstname) ^ hash<string>()(p.lastname) ^ hash<int>()(p.age);
+      }
+    };
+  }
+  ``` 
+
+27. tuple
